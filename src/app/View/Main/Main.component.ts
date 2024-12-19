@@ -33,7 +33,7 @@ export class MainComponent {
       this.moviesLaws = await this.getPelisBySearch("leyes");
       this.moviesMedical = await this.getPelisBySearch("medicina");
       this.moviesArchitec = await this.getPelisBySearch("architec");
-      
+      //localStorage.setItem("mylistas", JSON.stringify(this.moviesSoftwawe));
       this.cdr.detectChanges();
     }
 }
