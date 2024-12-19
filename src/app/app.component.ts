@@ -16,9 +16,7 @@ export class AppComponent {
   constructor(private router: Router){}
 
   navigateToSearch(){
-    // Navegar a una ruta temporal (sin cambiar la URL real)
     this.router.navigateByUrl('/empty', { skipLocationChange: true }).then(() => {
-      // Luego, navegar nuevamente a la misma ruta actual
       this.router.navigate([`search/${this.searchform.value}`]);
     });
   }

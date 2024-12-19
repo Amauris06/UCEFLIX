@@ -32,4 +32,13 @@ export class ApiService {
     return this.http.get<{results: Movie[]}>(url, { headers});
   }
 
+  GetMoviewBySearchById(query:string): Observable<{results: Movie}>{
+    const url = `https://api.themoviedb.org/3/movie/${query}?language=en-US`;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`,
+      'accept': 'application/json'
+    });
+    return this.http.get<{results: Movie}>(url, { headers});
+  }
+
 }
