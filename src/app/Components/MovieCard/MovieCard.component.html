@@ -22,83 +22,8 @@
         [alt]="movie.title"
         class="img-fluid rounded card-image z-0" />
     </div>
+
 </div>
 
-<style>
-.card-image {
-    object-fit: cover;
-    width: 100%;  
-    height: 100%;
-}
 
-.card-info {
-    opacity: 0;
-    transition: opacity 1s cubic-bezier(.56, .17, 0, .68);
-}
 
-.card:hover .card-info {
-    opacity: 1;
-}
-
-.card {
-    width: 100%; 
-    height: 100%; 
-    transition: transform 0.5s cubic-bezier(.56, .17, 0, .68);
-    border: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.card:hover {
-    transform: scale(1.02); 
-}
-
-.container-fluid {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.img-fluid {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-}
-
-.position-absolute {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 1;
-}
-
-.buttonCard {
-    border: none !important;
-    transition: 0.5s cubic-bezier(.56, .17, 0, .68);
-}
-
-.buttonCard:hover{
-    background-color: white !important;
-}
-
-.buttonCard:hover > div > i{
-    color: black;
-}
-
-.play-button{
-    border: none;
-    transition: 0.5s;
-}
-
-.play-button:hover{
-    color: #aaaaaa;
-}
-
-</style>
