@@ -51,5 +51,12 @@ export class ApiService {
   
     return this.http.get<{results: MovieTrailer[]}>(url, { headers });
   }
+  addMovie(movie: Movie): Observable<any> {
+    const url = `${this.apiUrl}?api_key=${this.token}`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(url, movie, { headers });
+  }
+
+
 
 }
