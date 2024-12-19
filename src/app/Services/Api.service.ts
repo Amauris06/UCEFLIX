@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Movie } from '../Models/Movie';
+import { MovieTrailer } from '../Models/MovieTrailer';
 
 @Injectable({
   providedIn: 'root'
@@ -32,13 +33,23 @@ export class ApiService {
     return this.http.get<{results: Movie[]}>(url, { headers});
   }
 
-  GetMoviewBySearchById(query:string): Observable<{results: Movie}>{
+  GetMoviewBySearchById(query:string): Observable<Movie>{
     const url = `https://api.themoviedb.org/3/movie/${query}?language=en-US`;
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`,
       'accept': 'application/json'
     });
-    return this.http.get<{results: Movie}>(url, { headers});
+    return this.http.get<Movie>(url, { headers});
+  }
+
+  getMovieTrailers(movieId: string) :  Observable<{results: MovieTrailer[]}>{
+    const url = `https://api.themoviedb.org/3/movie/${movieId}/videos`;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${this.token}`,
+      'accept': 'application/json'
+    });
+  
+    return this.http.get<{results: MovieTrailer[]}>(url, { headers });
   }
 
 }

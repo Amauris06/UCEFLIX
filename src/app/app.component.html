@@ -36,20 +36,20 @@
 
 <div class="my-5">
   <div class="w-100 ">
-    <a href="/">
-      <img src="/assets/images/uceflix.svg" class="d-block mx-auto" alt="Logo" width="220"/>
-    </a>
+      <a href="/">
+        <img src="/assets/images/uceflix.svg" class="d-block mx-auto" alt="Logo" width="220"/>
+      </a>
   </div>
-
-
+  
+  
   <div class="d-flex mx-auto justify-content-around aling-items-center mt-2">
-      <div class="">
-        <ul class="navbar-nav d-flex flex-row gap-3">
-          <li class="nav-item"><a class="hover navbar-decorator nav-link text-secondary" href="/mylist"><i class="bi bi-film"></i> Mi Lista</a></li>
-          <li class="nav-item"><a class="hover navbar-decorator nav-link text-secondary" href=""><i class="bi bi-person-fill-lock"></i> Administrador</a></li>
-        </ul>
-      </div>
-      <div>
+    <div class="">
+      <ul class="navbar-nav d-flex flex-row gap-3">
+        <li class="nav-item"><a class="hover navbar-decorator nav-link text-secondary" href="/mylist"><i class="bi bi-film"></i> Mi Lista</a></li>
+        <li class="nav-item"><a class="hover navbar-decorator nav-link text-secondary" href=""><i class="bi bi-person-fill-lock"></i> Administrador</a></li>
+      </ul>
+    </div>
+    <div>
         <div class="d-block">
           <input [formControl]="searchform" type="text" class="outline-none border rounded-start-pill outline-none px-3 py-2" placeholder="Buscar pelicula..."> 
           <button (click)="navigateToSearch()" class="px-3 py-2 border border-start-0 rounded-end-pill"><i class="bi bi-search"></i></button>  
