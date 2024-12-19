@@ -1,14 +1,14 @@
 <div class="container-fluid">
     <div *ngIf="movie" class="d-flex flex-column position-relative justify-content-center align-items-center">
-        <div *ngIf="movie.backdrop_path" class="d-flex w-100 px-10 position-relative z-0 mt-10">
+        <div *ngIf="movie.backdrop_path" class="d-flex w-100 px-10 position-absolute top-0 z-0 mt-10">
             <img class="w-100 rounded" [src]="'https://image.tmdb.org/t/p/w500'+ movie.backdrop_path" [alt]="movie.title">
         </div>
-        <div *ngIf="!movie.backdrop_path" class="d-flex w-100 px-10 position-relative z-0 mt-10">
+        <div *ngIf="!movie.backdrop_path" class="d-flex w-100 px-10 position-absolute top-0 z-0 mt-10">
             <div style="background-color: white; height: 500px; width: 100%;">
                 
             </div>
         </div>
-        <div class="row z-1 bg-white m-5 p-5 rounded position-absolute">
+        <div class="row z-1 bg-white m-5 p-5 rounded position-relative">
             <div class="col-2">
                 <img 
                 [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" 
